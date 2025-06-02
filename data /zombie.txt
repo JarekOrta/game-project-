@@ -1,0 +1,7 @@
+Walker, 40, 5, 10
+Crawler, 30, 3, 5
+Runner, 50, 7, 15
+mini-boss, 90, 10, 25
+
+delete this once code done
+format:   <name>, <hp>, <attack_power>, <xp_reward>
