@@ -1,5 +1,0 @@
-Walker, 40, 5
-Crawler, 30, 3
-Runner, 50, 7
-mini-boss, 90, 10
-

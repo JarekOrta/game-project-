@@ -1,6 +1,6 @@
 # character.py
 # Author: Jarek And Max
-# Description: Defines the Character class for the zombie survival game.
+# Description: defines the Character class for the zombie survival game
 
 from typing import Dict
 
@@ -8,18 +8,18 @@ from typing import Dict
 class Character:
     """Represents the player character in the zombie survival game.
 Attributes:
-name (str): the survivor name.
-max_hp (int): ,aximum health points.
-hp (int): current health points.
-attack (int): base damage done to zombie.
-level (int): Current level.
-ammo (int): bullets available.
-inventory (Dict[str, int]): Count of items ("Medkit", "Ammo Pack")."""
+name (str): the survivor name
+max_hp (int): ,aximum health points
+hp (int): current health points
+attack (int): base damage done to zombie
+level (int): Current level
+ammo (int): bullets available
+inventory (Dict[str, int]): Count of items ("Medkit", "Ammo Pack")"""
 
     def __init__(self, name: str) -> None:
-        """Initialize a new Character.
-         Value:name (str): Survivor’s chosen name.
-         Returns: None.
+        """Initialize a new Character
+         Value:name (str): Survivor’s chosen name
+         Returns: None
         """
         self.name = name
         self.max_hp = 100
@@ -42,10 +42,10 @@ Returns: int: damage dealt (equal to self.attack) if ammo > 0, else 0.
 
     def use_item(self, item_name: str) -> bool:
         """use an item from inventory if available:
-- "Medkit": restores 30 HP (max at max_hp).
-- "Ammo Pack": adds 5 bullets.
-Values: item_name (str): name of the item to use ("Medkit" or "Ammo Pack").
-Returns: bool: True if item was used; False if not.
+- "Medkit": restores 30 HP (max at max_hp)
+- "Ammo Pack": adds 5 bullets
+Values: item_name (str): name of the item to use ("Medkit" or "Ammo Pack")
+Returns: bool: True if item was used; False if not
         """
         if item_name not in self.inventory or self.inventory[item_name] <= 0:
             return False
@@ -67,7 +67,7 @@ Returns: bool: True if item was used; False if not.
 
 
     def is_alive(self) -> bool:
-        """Check if character is still alive.
-Returns:bool: True if hp > 0; False otherwise.
+        """check if character is still alive.
+returns:bool: True if hp > 0; False otherwise
         """
         return self.hp > 0

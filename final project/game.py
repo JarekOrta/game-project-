@@ -1,6 +1,6 @@
 # game.py
 # Author: Max and Jarek
-# Description: Defines the Game class (main loop, battle, save/load)
+# Description: defines the Game class (main loop, battle, save/load)
 import os
 import random
 from typing import Dict, Any, List

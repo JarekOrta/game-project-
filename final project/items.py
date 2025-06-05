@@ -7,9 +7,8 @@ from typing import Any
 
 class Item:
     """
-    Represents items (Medkit or Ammo Pack)
-
-    Attributes:
+Represents items (Medkit or Ammo Pack)
+Attributes:
 name (str): Item’s name.
 effect_type (str): "heal" or "ammo"
 value (int): amount healed or ammo given
