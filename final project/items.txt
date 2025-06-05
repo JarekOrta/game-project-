@@ -1,0 +1,4 @@
+Medkit, heal, 30
+Ammo Pack, ammo, 5
+
+

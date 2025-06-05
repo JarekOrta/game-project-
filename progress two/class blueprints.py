@@ -6,7 +6,6 @@ class Character:
         #self.name(str): player chooses name
         #self.hp(int): health points (starts at 100)
         #self.attack(int): base damage (starts at 10)
-        #self.xp(int): experience points (starts at 0)
         #self.inventory(list[str]): names of items owned ("Medkit" & "Ammo")
         #self.ammo(int): total bullets available (starts at 10)
         pass
@@ -24,15 +23,12 @@ class Character:
         #returns: True if item was used; False otherwise.
         pass
 
-    def gain_xp(self, amount: int) -> None:
-        #add `amount` XP to self.xp. (if possible, increase damage or health to player every level up.)
-        pass
 
     def is_alive(self) -> bool:
         #returns True if hp > 0; False otherwise.
         pass
 ##character.py
-'''the function initializes a player character with default HP, attack, XP, and inventory.
+'''the function initializes a player character with default HP, attack, and inventory.
 # name (str): the player’s chosen name.
 # Returns: None.
 def __init__(self, name: str) -> None:
@@ -48,13 +44,12 @@ def attack_zombie(self, zombie) -> int:
 
 # zombie.py
 class Zombie:
-    def __init__(self, name: str, hp: int, attack_power: int, xp_reward: int):
+    def __init__(self, name: str, hp: int, attack_power: int):
 
         # Attributes:
         #self.name(str): ex: "Walker", "Crawler"
         #self.hp(int): health points
         #self.attack_power(int): damage dealt per attack
-         #self.xp_reward(int): XP given to player when defeated
         pass
 
     def take_damage(self, damage: int) -> None:
@@ -115,7 +110,6 @@ class Game:
         #while both are alive:
         #player attacks zombie (if ammo > 0).
         #if zombie still alive, zombie attacks player.
-        #if player wins: gain zombie.xp_reward XP and maybe get loot.
         pass
 
     def explore(self) -> None:
@@ -135,7 +129,6 @@ class Game:
 # helpers.py
 def load_zombies(file_path: str) -> list:
     #read `file_path` line by line; each line defines a zombie:
-    #name, hp, attack_power, xp_reward
     #returns: list of zombie instances.
     pass
 

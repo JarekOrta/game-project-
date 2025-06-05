@@ -1,6 +1,0 @@
-Medkit, heal, 30
-Ammo Pack, ammo, 5
-
-delete once code is done
-format: <item_name>, heal, <heal_amount>
-<item_name>, ammo, <ammo_amount>
