@@ -1,6 +1,6 @@
 # main.py
-# Author: Your Name Here
-# Description: Entry point for the Zombie Survival game.
+# Author: Max and Jarek
+# Description: start point fo game
 
 from game import Game
 
