@@ -63,7 +63,7 @@ def get_valid_input(prompt: str, options: List[str]) -> str:
         if response in options:
             return response
         else:
-            print(f">> Invalid input. Please choose from {options}.")
+            print(f">> invalid input. please choose from {options}.")
 
 
 def save_game_state(state: Dict[str, Any], filename: str) -> None:
