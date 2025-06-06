@@ -33,7 +33,7 @@ class TestItem(unittest.TestCase):
         self.assertEqual(self.char.ammo, 7)
 
     def test_no_effect_for_invalid_type(self):
-        #Test that invalid effect_type does nothing.
+        #test that invalid effect_type does nothing.
         noeffect = Item("noeffect", "invalid", 999)
         self.char.hp = 50
         self.char.ammo = 0
