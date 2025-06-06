@@ -8,13 +8,13 @@ from typing import Any
 class Item:
 #represents items (Medkit or Ammo Pack)
 # attributes:
-#name (str): Item’s name.
+#name (str): item’s name
 #effect_type (str): "heal" or "ammo"
 #value (int): amount healed or ammo given
 
 
     def __init__(self, name: str, effect_type: str, value: int) -> None:
-#initialize a new Item
+#initialize a new item
 #Values:
 #name (str): Item name
 #effect_type (str): "heal" or "ammo"

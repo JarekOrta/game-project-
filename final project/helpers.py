@@ -12,8 +12,8 @@ import os
 
 def load_zombies(file_path: str) -> List[Zombie]:
 #read a text file of zombie definitions and return a list of Zombie instances.
-#File format (each line): name, hp, attack_power
-#alues: file_path (str): Path to zombies.txt
+#file format (each line): name, hp, attack_power
+#values: file_path (str): Path to zombies.txt
 #Returns: List[Zombie]: list of Zombie objects loaded from file.
 
     zombies: List[Zombie] = []
@@ -67,8 +67,8 @@ def get_valid_input(prompt: str, options: List[str]) -> str:
 
 
 def save_game_state(state: Dict[str, Any], filename: str) -> None:
-#Save the given game state dict to a JSON file under saved_games/."""
-# Ensure the 'saved_games' folder exists
+#save the given game state dict to a JSON file under saved_games/."""
+#ensure the 'saved_games' folder exists
     os.makedirs("saved_games", exist_ok=True)
 
     # Write into saved_games/<filename>
@@ -76,6 +76,6 @@ def save_game_state(state: Dict[str, Any], filename: str) -> None:
         json.dump(state, f, indent=4)
 
 def load_game_state(filename: str) -> Dict[str, Any]:
-#Load game state from a JSON file under saved_games/
+#load game state from a JSON file under saved_games/
     with open(f"saved_games/{filename}", "r") as f:
         return json.load(f)

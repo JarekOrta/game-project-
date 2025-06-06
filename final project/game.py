@@ -12,7 +12,7 @@ from helpers import load_zombies, load_items, get_valid_input, save_game_state, 
 
 class Game:
 
- #all game logic: starting a new game, exploring, battling, saving/loading.
+#all game logic: starting a new game, exploring, battling, saving/loading.
 
 
     def __init__(self) -> None:

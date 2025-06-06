@@ -1,6 +1,6 @@
 # main.py
 # Author: Max and Jarek
-# Description: start point fo game
+# Description: start point of game
 
 from game import Game
 
