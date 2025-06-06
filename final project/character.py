@@ -9,7 +9,7 @@ class Character:
     """Represents the player character in the zombie survival game.
 Attributes:
 name (str): the survivor name
-max_hp (int): ,aximum health points
+max_hp (int):maximum health points
 hp (int): current health points
 attack (int): base damage done to zombie
 level (int): Current level
