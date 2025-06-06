@@ -11,11 +11,11 @@ import os
 
 
 def load_zombies(file_path: str) -> List[Zombie]:
-    """read a text file of zombie definitions and return a list of Zombie instances.
-File format (each line): name, hp, attack_power
-Values: file_path (str): Path to zombies.txt
-Returns: List[Zombie]: list of Zombie objects loaded from file.
-    """
+#read a text file of zombie definitions and return a list of Zombie instances.
+#File format (each line): name, hp, attack_power
+#alues: file_path (str): Path to zombies.txt
+#Returns: List[Zombie]: list of Zombie objects loaded from file.
+
     zombies: List[Zombie] = []
     with open(file_path, "r") as f:
         for line in f:
@@ -30,15 +30,14 @@ Returns: List[Zombie]: list of Zombie objects loaded from file.
 
 
 def load_items(file_path: str) -> Dict[str, Item]:
-    """
-read a text file of item definitions and return a dictionary mapping item names to Item instances
-file format (each line):
-name, effect_type, value
-Values:
-file_path (str): Path to items.txt
-Returns:
-Dict[str, Item]: { item_name: Item(...) }
-    """
+#read a text file of item definitions and return a dictionary mapping item names to Item instances
+#file format (each line):
+#name, effect_type, value
+#Values:
+#file_path (str): Path to items.txt
+#Returns:
+#Dict[str, Item]: { item_name: Item(...) }
+
     items: Dict[str, Item] = {}
     with open(file_path, "r") as f:
         for line in f:
@@ -53,12 +52,12 @@ Dict[str, Item]: { item_name: Item(...) }
 
 
 def get_valid_input(prompt: str, options: List[str]) -> str:
-    """prompt the user until they type one of the allowed options (case-insensitive)
-Values:
-prompt (str): the question to display
-options (List[str]): list of valid responses (all lowercase).
-returns:str: the valid lowercased response
-    """
+#prompt the user until they type one of the allowed options (case-insensitive)
+#Values:
+#prompt (str): the question to display
+#options (List[str]): list of valid responses (all lowercase).
+#returns:str: the valid lowercased response
+
     while True:
         response = input(prompt).strip().lower()
         if response in options:
@@ -68,8 +67,8 @@ returns:str: the valid lowercased response
 
 
 def save_game_state(state: Dict[str, Any], filename: str) -> None:
-    """Save the given game state dict to a JSON file under saved_games/."""
-    # Ensure the 'saved_games' folder exists
+#Save the given game state dict to a JSON file under saved_games/."""
+# Ensure the 'saved_games' folder exists
     os.makedirs("saved_games", exist_ok=True)
 
     # Write into saved_games/<filename>
@@ -77,6 +76,6 @@ def save_game_state(state: Dict[str, Any], filename: str) -> None:
         json.dump(state, f, indent=4)
 
 def load_game_state(filename: str) -> Dict[str, Any]:
-    """Load game state from a JSON file under saved_games/."""
+#Load game state from a JSON file under saved_games/
     with open(f"saved_games/{filename}", "r") as f:
         return json.load(f)

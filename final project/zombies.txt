@@ -1,0 +1,4 @@
+Walker, 50, 8
+Runner, 40, 10
+Crawler, 25, 4
+Semi-Boss, 75, 20
