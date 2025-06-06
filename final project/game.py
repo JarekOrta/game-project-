@@ -11,9 +11,9 @@ from helpers import load_zombies, load_items, get_valid_input, save_game_state, 
 
 
 class Game:
-    """
- all game logic: starting a new game, exploring, battling, saving/loading.
-    """
+
+ #all game logic: starting a new game, exploring, battling, saving/loading.
+
 
     def __init__(self) -> None:
         """
@@ -84,9 +84,9 @@ call corresponding choice.
                 break
 
     def explore(self) -> None:
-        """
-        Randomly select a zombie and enter battle.
-        """
+
+        #Randomly select a zombie and enter battle.
+
         zombie_template = random.choice(self.zombies)
         enemy = Zombie(zombie_template.name,
                        zombie_template.hp,
@@ -115,7 +115,7 @@ after zombie is defeated, award loot- post_battle_loot().
                     zombie.take_damage(damage)
                     print(f">> You shot the {zombie.name} for {damage} damage.")
                 else:
-                    print(">> No ammo! Can't attack.Sucks!!")
+                    print(">> No ammo! Can't attack. Sucks!!")
 
                 if not zombie.is_alive():
                     print(f"\n*** You defeated the {zombie.name}! ***")
@@ -144,7 +144,7 @@ after zombie is defeated, award loot- post_battle_loot().
 
             elif action == "run":
                 if random.random() < 0.5:
-                    print(f">> You tried to run. but the {zombie.name} didn't give up! it's Chasing you")
+                    print(f">> You tried to run. but the {zombie.name} didn't give up! it's chasing you")
                     z_damage = zombie.attack(self.player)
                     self.player.hp = max(self.player.hp - z_damage, 0)
                     print(f">> You took {z_damage} damage while running.\n")
@@ -172,9 +172,9 @@ after zombie is defeated, award loot- post_battle_loot().
         print()
 
     def show_inventory(self) -> None:
-        """
-        Display current inventory counts and ammo.
-        """
+
+        #Display current inventory counts and ammo.
+
         print("\n--- Inventory ---")
         print(f"Medkits   : {self.player.inventory.get('Medkit', 0)}")
         print(f"Ammo Packs: {self.player.inventory.get('Ammo Pack', 0)}")
@@ -182,9 +182,9 @@ after zombie is defeated, award loot- post_battle_loot().
         print("-----------------\n")
 
     def show_status(self) -> None:
-        """
-        Display current HP and ammo count.
-        """
+
+        #Display current HP and ammo count.
+
         print("\n--- Status ---")
         print(f"Name : {self.player.name}")
         print(f"HP   : {self.player.hp}/{self.player.max_hp}")
@@ -192,9 +192,9 @@ after zombie is defeated, award loot- post_battle_loot().
         print("---------------\n")
 
     def save_game(self) -> None:
-        """
-        Prompt for a save filename and write current game state to JSON.
-        """
+
+        #Prompt for a save filename and write current game state to JSON.
+
         filename = input("Enter a name for your save file (example: my_game.json): ").strip()
         state: Dict[str, Any] = {
             "name": self.player.name,
