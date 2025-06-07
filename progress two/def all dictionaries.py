@@ -23,6 +23,7 @@ saved_data: dict = {
     "player_name": "Alice",
     "hp": 70,
     "attack": 10,
+    "xp": 20,
     "inventory": ["Medkit", "Ammo Pack"],
     "ammo": 8,
     "stats": {"max_hp": 100, "attack": 10}
